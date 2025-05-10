@@ -1,0 +1,96 @@
+
+========== Метод OPTIONS ==========
+
+Ответ сервера (200):
+Код ответа: 200
+Заголовки ответа:
+Date: Sat, 10 May 2025 16:28:30 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 0
+Connection: keep-alive
+Server: gunicorn/19.9.0
+Allow: HEAD, GET, OPTIONS
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Credentials: true
+Access-Control-Allow-Methods: GET, POST, PUT, DELETE, PATCH, OPTIONS
+Access-Control-Max-Age: 3600
+
+Тело ответа:
+
+
+========== Метод GET ==========
+Запрос (GET):
+URL: https://httpbin.org/get?param=value
+Заголовки запроса:
+{'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}
+
+Ответ сервера (200):
+Код ответа: 200
+Заголовки ответа:
+Date: Sat, 10 May 2025 16:28:31 GMT
+Content-Type: application/json
+Content-Length: 342
+Connection: keep-alive
+Server: gunicorn/19.9.0
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Credentials: true
+
+Тело ответа:
+{
+  "args": {
+    "param": "value"
+  }, 
+  "headers": {
+    "Accept": "*/*", 
+    "Accept-Encoding": "gzip, deflate", 
+    "Host": "httpbin.org", 
+    "User-Agent": "python-requests/2.32.3", 
+    "X-Amzn-Trace-Id": "Root=1-681f7eaf-3b4147970609d1617b114134"
+  }, 
+  "origin": "95.27.11.144", 
+  "url": "https://httpbin.org/get?param=value"
+}
+
+
+========== Метод POST ==========
+Запрос (POST):
+URL: https://httpbin.org/post
+Заголовки запроса:
+{'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '28', 'Content-Type': 'application/x-www-form-urlencoded'}
+Тело запроса:
+username=oleg&password=12345
+
+Ответ сервера (200):
+Код ответа: 200
+Заголовки ответа:
+Date: Sat, 10 May 2025 16:28:31 GMT
+Content-Type: application/json
+Content-Length: 509
+Connection: keep-alive
+Server: gunicorn/19.9.0
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Credentials: true
+
+Тело ответа:
+{
+  "args": {}, 
+  "data": "", 
+  "files": {}, 
+  "form": {
+    "password": "12345", 
+    "username": "oleg"
+  }, 
+  "headers": {
+    "Accept": "*/*", 
+    "Accept-Encoding": "gzip, deflate", 
+    "Content-Length": "28", 
+    "Content-Type": "application/x-www-form-urlencoded", 
+    "Host": "httpbin.org", 
+    "User-Agent": "python-requests/2.32.3", 
+    "X-Amzn-Trace-Id": "Root=1-681f7eaf-2fd4266f75fc519c3cceb244"
+  }, 
+  "json": null, 
+  "origin": "95.27.11.144", 
+  "url": "https://httpbin.org/post"
+}
+
